@@ -44,7 +44,6 @@ export class RecipeDetailPage implements OnInit {
           text: 'Delete',
           handler: () => {
             this.recipesService.deleteRecipe(this.loadedRecipe.id);
-            // TODO find if this is a bug (array list not updated after delete IF NO delay in router.navigate)
             this.router.navigate(['/recipes']);
           }
         }

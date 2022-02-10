@@ -32,8 +32,7 @@ export class RecipesService {
         return { ...this.recipes.find((recipe) => recipe.id === recipeId) };
     }
 
-    deleteRecipe(recipeId: string): Observable<boolean> {
+    deleteRecipe(recipeId: string): void {
         this.recipes = this.recipes.filter((recipe) => recipe.id !== recipeId);
-        return of(true);
     }
 }
